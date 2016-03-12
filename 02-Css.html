@@ -1,6 +1,85 @@
 <html>
 
 	<head>
+
+		<style type="text/css">  
+
+		/*POR ETIQUETA TAG*/
+
+		body {
+
+				color: black;
+				
+
+		}
+
+		/*span {
+
+				color: red;
+
+		}*/
+
+		/*POR CLASE CSS*/
+
+		.texto-rojo {
+
+				color:red;
+
+		}
+
+		.texto-verde {
+
+				color:green;
+
+		}
+
+
+		.texto-amarillo {
+
+				color:yellow;
+
+		}
+
+
+		.texto-chico {
+
+				font-size: 0.8em;
+
+		}
+
+		.texto-mediano {
+
+				font-size: 1.5em;
+
+		}
+
+		.texto-grande {
+
+				font-size: 3em;
+
+		}
+
+		/*POR ID */
+
+		#encabezado  {
+
+			background: gray;
+		}
+
+
+		#pie {
+
+
+			background-color: gray;
+			width: 100px;
+			float: right;
+			position: absolute;
+			top: 0px;
+			right: 0px;
+
+		}
+
+		</style>
 	
 
 
@@ -10,24 +89,34 @@
 	<body>
 
 
-	<h1>Probando 123...<h1> <br><br>
 
-		<img src="http://www.elsol.com.ar/public/imagenes/000/635/483/000635483-succes.word" alt="mmmm!!" width="150"> <br>
+	<h1>Demo C<span class="texto-rojo">S</span>S:</h1>
 
-	<h2>Video embebido:</h2>
-	<iframe width="560" 
-			height="315" 
-			src="https://www.youtube.com/embed/_OFMkCeP6ok?rel=0" 
-			frameborder="0" 
-			allowfullscreen></iframe>
+		<h2>Antes?</h2>
+			<font color="red" face="Arial">
+				Otro color con tag font (NO USAR)
+			</font>
+			<!-- Por qué no utilizar? PORQUE ES MUCHO CODIGO PARA POCO EFECTO-->
+
+		<h2>Ahora? CSS Pap&aacute!</h2>
+
+			<span class="texto-rojo">Hola estoy en rojo con CSS</span>
+
+			<p>
+				<span class="texto-grande texto-verde">Texto 1</span><br/>
+				<span class="texto-mediano texto-amarillo">Texto 2</span><br/>
+				<span class="texto-chico texto-rojo">Texto 3</span><br/>
+			</p>
+
+			
 
 
-	<h2>iframe Google:</h2>
-	<iframe width="560" 
-			height="315" 
-			src="http://www.google.com.ar" 
-			frameborder="0" 
-			allowfullscreen></iframe>
+			<div id="pie">
+
+				<span>PIE DE PAGINA</span>
+
+			</div>
+	
 
 	</body>
 	
