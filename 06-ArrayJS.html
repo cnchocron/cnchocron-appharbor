@@ -1,0 +1,54 @@
+﻿<html>
+<head>
+    
+    <title>06 - Arreglo JS</title>
+</head>
+<body>
+
+    <h1 id="titulo">Demo Array JS</h1>
+
+    <button id="elemento1">Boton 1</button>
+    <button id="elemento2">Boton 2</button>
+    <button id="elemento3">Boton 3</button><br /><br />
+
+    <div id="botonera">Botonera</div><br />
+
+    <script type="text/javascript">
+
+
+        window.onload = function () {
+        
+
+            for (var i = 1; i < 4; i++) {
+
+                var b1 = document.getElementById('elemento'+i);
+                b1.addEventListener('click', function () {
+                    alert(this.innerHTML)
+                });
+
+            }
+
+
+            var botonera = document.getElementById('botonera');
+            for (var j = 1; j < 101; j++) {
+
+               
+                var boton = document.createElement("button");
+                boton.type = "button";
+                boton.innerHTML = j;
+                boton.addEventListener('click', function () {
+                    alert(this.innerHTML)
+                });
+                botonera.appendChild(boton);
+
+            }
+            
+
+        };
+
+
+    </script>
+
+    
+</body>
+</html>
