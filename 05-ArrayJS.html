@@ -37,13 +37,30 @@
                 boton.type = "button";
                 boton.innerHTML = j;
                 boton.addEventListener('click', function () {
-                    alert(this.innerHTML)
+                    var self = this;
+                    reorganizarTodo(self);
                 });
                 botonera.appendChild(boton);
 
             }
             
+            function reorganizarTodo(boton){
+                console.log(boton.innerHTML);
 
+                for (var i = 0; i < botonera.children.length; i++) {
+    
+                    var random = Math.floor(Math.random() * (botonera.children.length + 1));
+                    var b = botonera.children[random];
+                    mover(b);
+                    console.log(i);
+                }
+
+            }
+
+            function mover(boton) {
+                botonera.removeChild(boton);
+                botonera.appendChild(boton);
+            }
         };
 
 
