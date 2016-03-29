@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+    <title>09 Form</title>
+
+    <style type="text/css" >
+    
+    </style>
+</head>
+<body>
+    <h1>09 Form</h1>
+
+    <input 
+        type="text" 
+        name="nombre" 
+        value="" /><br />
+
+    <input 
+        type="number" 
+        name="nombre" 
+        value="" /><br />
+
+    <input 
+        type="button" 
+        name="btn" 
+        value="Buscar" /><br />
+
+    <input 
+        type="checkbox" 
+        name="chkSoyAlumno" 
+        value="1" /> Soy Alumno <br />
+
+    <input 
+        type="radio" 
+        name="optionEquipo" 
+        value="Boca" /> Boca
+
+    <input 
+        type="radio" 
+        name="optionEquipo" 
+        value="River" /> River
+
+    <br />
+
+    <hr  />
+    Buscar en Google...
+
+    <form action="https://www.google.com.ar/search" 
+          method ="get">
+        <input type="text" name="q" value="" />
+        <input type="submit" name="enviar" value="Buscar en Gooble" />
+        <input type="image" name="btnBuscarImg" value="" src="imagenes/buscar.png" />
+        <input type="hidden" name="autor" value="Cristhian Chocron" />
+      
+
+
+
+
+    </form>
+
+
+    <hr  />
+    Buscar IMAGEN en Google...
+     <form action="https://www.google.com.ar/search" 
+          method ="get">
+         <input type="file" name="imagen" value="" />
+        <input type="submit" name="enviar" value="Buscar en Gooble" />
+        <input type="image" name="btnBuscarImg" value="" src="imagenes/buscar.png" />
+     
+      
+    </form>
+</body>
+</html>
