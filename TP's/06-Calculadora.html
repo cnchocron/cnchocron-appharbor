@@ -5,110 +5,65 @@
 </head>
 <body>
 
-    <button id="btn1">1</button>
-    <button id="btn2">2</button>
-    <button id="btn3">3</button>
-    <br /><br />
-    <button id="btn4">4</button>
-    <button id="btn5">5</button>
-    <button id="btn6">6</button>
-    <br /><br />
-    <button id="btn7">7</button>
-    <button id="btn8">8</button>
-    <button id="btn9">9</button>
-    <br /><br />
-    <button id="btn10">0</button>
+    <h1>TP 01: Crazy Calculator</h1><br />
+    
+    <input type="text" id="pantalla"  name="pantalla" size="16"><br /><br />
+     
+    <div id="botonera"></div>
 
     <script type="text/javascript">
 
 
-        function cambiarValor() {
-
-            var v = document.getElementById('btn1');
-            if (v) {
-                v.innerHTML = '3';
-            }
-
-            var v = document.getElementById('btn2');
-            if (v) {
-                v.innerHTML = '6';
-            }
-
-            var v = document.getElementById('btn3');
-            if (v) {
-                v.innerHTML = '1';
-            }
-
-            var v = document.getElementById('btn4');
-            if (v) {
-                v.innerHTML = '2';
-            }
-
-            var v = document.getElementById('btn5');
-            if (v) {
-                v.innerHTML = '0';
-            }
-
-            var v = document.getElementById('btn6');
-            if (v) {
-                v.innerHTML = '9';
-            }
-
-            var v = document.getElementById('btn7');
-            if (v) {
-                v.innerHTML = '8';
-            }
-
-            var v = document.getElementById('btn8');
-            if (v) {
-                v.innerHTML = '5';
-            }
-
-            var v = document.getElementById('btn9');
-            if (v) {
-                v.innerHTML = '7';
-            }
-
-            var v = document.getElementById('btn10');
-            if (v) {
-                v.innerHTML = '4';
-            }
-        }
-       
-
         window.onload = function () {
+        
 
-            var b1 = document.getElementById('btn1');
-            b1.addEventListener('click', cambiarValor);
+            var botonera = document.getElementById('botonera');
+            for (var j = 0; j < 10; j++) {
 
-            var b1 = document.getElementById('btn2');
-            b1.addEventListener('click', cambiarValor);
+               
+                var boton = document.createElement("button");
+                boton.type = "button";
+                boton.innerHTML = j;
+                boton.addEventListener('click', function () {
+                    var self = this;
+                    reorganizarTodo(self);
+                });
+                botonera.appendChild(boton);
 
-            var b1 = document.getElementById('btn3');
-            b1.addEventListener('click', cambiarValor);
+            }
+            
+            function reorganizarTodo(boton){
+                console.log(boton.innerHTML);
 
-            var b1 = document.getElementById('btn4');
-            b1.addEventListener('click', cambiarValor);
+                for (var i = 0; i < botonera.children.length; i++) {
+    
+                    var random = Math.floor(Math.random() * (botonera.children.length + 1));
+                    var b = botonera.children[random];
+                    mover(b);
+                    console.log(i);
+                }
 
-            var b1 = document.getElementById('btn5');
-            b1.addEventListener('click', cambiarValor);
+            }
 
-            var b1 = document.getElementById('btn6');
-            b1.addEventListener('click', cambiarValor);
+            function mover(boton) {
+                botonera.removeChild(boton);
+                botonera.appendChild(boton);
+            }
 
-            var b1 = document.getElementById('btn7');
-            b1.addEventListener('click', cambiarValor);
 
-            var b1 = document.getElementById('btn8');
-            b1.addEventListener('click', cambiarValor);
 
-            var b1 = document.getElementById('btn9');
-            b1.addEventListener('click', cambiarValor);
+            
 
-            var b1 = document.getElementById('btn10');
-            b1.addEventListener('click', cambiarValor);
-        }
+
+
+
+        };
+
+                
+
     </script>
+
+    <input type="button" class="largo" value="Limpiar todo" onclick="borradoTotal()"  />
 
 </body>
 </html>
