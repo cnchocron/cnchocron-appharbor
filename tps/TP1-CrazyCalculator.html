@@ -26,6 +26,8 @@
                 boton.innerHTML = j;
                 boton.addEventListener('click', function () {
                     var self = this;
+                    var d = document.getElementById('pantalla');
+                    d.value = d.value + this.innerHTML;
                     reorganizarTodo(self);
                 });
                 botonera.appendChild(boton);
@@ -53,7 +55,12 @@
 
 
             
+            var c = document.getElementById('borrar'); //funcion acerar calculadora
+            c.addEventListener('click', function () {
+                var ce = document.getElementById('pantalla');
+                ce.value = "";
 
+            });
 
 
 
@@ -63,7 +70,7 @@
 
     </script>
 
-    <input type="button" name="borrar" value="C" onclick="borrarTodo()"  />
+    <input type="button" name="borrar" id="borrar" value="C" />
 
 </body>
 </html>
